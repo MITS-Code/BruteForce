@@ -9,13 +9,13 @@ namespace BruteForce
 {
     class QuadraticBruteForce //N^2 Complexity
     {
-        int maxSum = 0;//Init
+        public int maxSum = 0;//Init
         private int seqStart { get; set; }
         private int seqEnd { get; set; }
         private int timesRun = 0;
         private long totalTime = 0;
         private Stopwatch sw = new Stopwatch();
-        public int MaxSubSequenceSum(int[] input)
+        public void MaxSubSequenceSum(int[] input)
         {
             timesRun += 1;
             sw.Start();
@@ -35,7 +35,6 @@ namespace BruteForce
             }
             sw.Stop();
             totalTime += sw.ElapsedMilliseconds;
-            return maxSum;
         }
 
         public long getTime()
